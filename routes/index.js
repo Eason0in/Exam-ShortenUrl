@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
   Url.findOne({ true_url: req.body.true_url }).exec((err, urls) => {
     if (err) throw err
 
-    let shorten_url = 'http://localhost:3000/e/'
+    let shorten_url = process.env.LOCAL_URL || 'http://localhost:3000/e/'
 
     if (urls) {
       shorten_url += urls.shorten_url
