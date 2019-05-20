@@ -30,8 +30,8 @@ npm run start  //執行程式
 
 ## Screen Photo
 
-![登入](https://github.com/Eason0in/Restaurant-CRUD/blob/master/public/img/index.JPG)
-![首頁](https://github.com/Eason0in/Restaurant-CRUD/blob/master/public/img/index2.JPG)
+![登入](https://github.com/Eason0in/Exam-ShortenUrl/blob/master/public/img/index.JPG)
+![首頁](https://github.com/Eason0in/Exam-ShortenUrl/blob/master/public/img/index2.JPG)
 
 ## 使用工具
 
