@@ -1,10 +1,13 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 const express = require('express')
 const app = express()
 const port = 3000
 const bodyParser = require('body-parser')
 const exphbs = require('express-handlebars')
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/shortenurl', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/shortenurl', { useNewUrlParser: true })
 const db = mongoose.connection
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
@@ -23,6 +26,6 @@ db.once('open', () => {
 app.use('/', require('./routes/index'))
 app.use('/e', require('./routes/redirect'))
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`App is running in http://localhost:${port}`)
 })

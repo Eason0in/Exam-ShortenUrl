@@ -16,6 +16,7 @@ const shorten = true_url => {
   })
 }
 
+//確認是否重複
 const confirmUsable = (digits, cb) => {
   let newUrl = getRandomUrl(digits)
 
@@ -29,6 +30,7 @@ const confirmUsable = (digits, cb) => {
   })
 }
 
+//依照digits產生英文大小寫+數字亂數
 const getRandomUrl = digits => {
   let temporaryUrl = ''
   const text = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
