@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="form-group">
+    <label for="shorten_rul">您的網址縮短為:</label>
+    <div class="alert alert-primary" role="alert">
+      {{url}}
+    </div>
+  </div>
+  <form action="/" method="POST">
+    <div class="form-group">
+      <label for="shorten_rul">請輸入您要縮短的網址 ( 請記得加上 http:// )</label>
+      <input type="url" class="form-control" name="shorten_rul" id="shorten_rul" aria-describedby="urlHelp"
+        placeholder="https://www.google.com/">
+    </div>
+    <button type="submit" class="btn btn-info">Submit</button>
+  </form>
+</div>
