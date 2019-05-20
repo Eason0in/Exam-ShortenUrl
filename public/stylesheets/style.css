@@ -1,0 +1,15 @@
+button[data-clipboard-text] {
+  position: absolute;
+  top: 5px;
+  left: 300px;
+  padding: 0;
+  color: lightslategray;
+}
+
+button[data-clipboard-text]:hover {
+  color: black;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: lightgray;
+}

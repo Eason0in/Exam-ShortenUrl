@@ -1,15 +1,21 @@
 <div class="container">
   <div class="form-group">
-    <label for="shorten_rul">您的網址縮短為:</label>
+    <label>您的網址縮短為:</label>
+    {{#if shorten_url}}
     <div class="alert alert-primary" role="alert">
-      {{url}}
+
+      <a class="navbar-brand text-info" href="{{shorten_url}}" target="_blank">{{shorten_url}}</a>
+
+      <button type="button" class="btn" data-toggle="tooltip" title="Copy to clipboard!"
+        data-clipboard-text="{{shorten_url}}">copy</button>
     </div>
+    {{/if}}
   </div>
   <form action="/" method="POST">
     <div class="form-group">
-      <label for="shorten_rul">請輸入您要縮短的網址 ( 請記得加上 http:// )</label>
-      <input type="url" class="form-control" name="shorten_rul" id="shorten_rul" aria-describedby="urlHelp"
-        placeholder="https://www.google.com/">
+      <label for="true_url">請輸入您要縮短的網址 ( 請包含 http:// )</label>
+      <input type="url" class="form-control" name="true_url" id="true_url" aria-describedby="urlHelp"
+        placeholder="https://www.google.com/" required>
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
   </form>
