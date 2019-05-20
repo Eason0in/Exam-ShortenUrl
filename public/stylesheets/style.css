@@ -1,7 +1,7 @@
 button[data-clipboard-text] {
   position: absolute;
-  top: 5px;
-  left: 300px;
+  top: 1px;
+  left: 450px;
   padding: 0;
   color: lightslategray;
 }
