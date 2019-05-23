@@ -24,7 +24,6 @@ db.once('open', () => {
 })
 
 app.use('/', require('./routes/index'))
-app.use('/e', require('./routes/redirect'))
 
 app.listen(process.env.PORT || port, () => {
   console.log(`App is running in http://localhost:${port}`)
